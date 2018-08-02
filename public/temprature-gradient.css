@@ -1,0 +1,59 @@
+.gradient {
+    position: relative;
+    border-radius: 30px;
+    height: 60px;
+    margin-top: 33px;
+}
+
+.gradient_temprature {
+    background-image: linear-gradient(90deg, #068FFF 2%, #FFD800 51%, #F76B1C 100%);
+}
+
+.gradient_light {
+    background-image: linear-gradient(-85deg, #FFE682 2%, #FF9E00 98%);
+}
+
+.gradient__circle {
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 4px white solid;
+    margin-top: -4px;
+    margin-left: 339px;
+    box-shadow: 0 1px 10px -7px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.gradient__circle:before {
+    border-radius: 50%;
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 3px solid rgba(33, 33, 33, 0.1);
+}
+
+.gradient__value {
+    position: absolute;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.gradient__value_left {
+    left: 0;
+}
+
+.gradient__value_right {
+    right: 0;
+}
+
+.gradient__value_image {
+    top: -7px;
+}
