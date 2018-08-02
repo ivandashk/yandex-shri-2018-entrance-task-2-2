@@ -1,0 +1,53 @@
+.modal-form {
+    display: grid;
+    grid-column: 2;
+    grid-column-gap: 16px;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 60px;
+    margin: 20px;
+
+    &__layout {
+        align-items: center;
+        background-color: $layout-color;
+        display: none;
+        grid-template-columns: 1fr 630px 1fr;
+        height: 100%;
+        left: 0;
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    };
+
+    &__content {
+        background-color: $background-color;
+        border-radius: 20px;
+        padding: 25px;
+    };
+
+    &__button {
+        background-color: $background-color;
+        border-radius: 20px;
+        box-sizing: border-box;
+        color: $text-color;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 20px;
+        text-align: center;
+        letter-spacing: 0;
+        cursor: pointer;
+
+        &_apply {
+            background-color: $color-accent;
+            color: $apply-button-text-color;
+            
+            &:hover {
+                background-color: $color-accent-active;
+            };
+        };
+
+        
+    };
+}

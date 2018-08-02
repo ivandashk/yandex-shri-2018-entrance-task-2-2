@@ -1,0 +1,28 @@
+.presets {
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    
+    &__item {
+        font-size: 14px;
+        box-sizing: border-box;
+        display: inline;
+        border-radius: 20px;
+        padding: 7px 15px;
+        text-align: center;
+        font-weight: bold;
+        background-color: $li-inactive;
+        margin-right: 6px;
+
+        &:hover {
+            background-color: $color-accent-active;
+        };
+
+        &_active {
+            background-color: $color-accent;
+        };
+    }
+}
+
+
+

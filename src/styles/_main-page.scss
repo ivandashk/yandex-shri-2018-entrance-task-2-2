@@ -1,0 +1,9 @@
+.main-page {
+    background-color: $color-accent;
+    width: 100vw;
+    height: 100vh;
+
+    &_blurred {
+        filter: blur(2px);
+    };
+}

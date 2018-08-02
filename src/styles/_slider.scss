@@ -1,0 +1,66 @@
+.slider {
+    position: relative;
+    border-radius: 30px;
+    height: 60px;
+    margin-top: 33px;
+
+    &_temprature {
+        background-image: $temprature-gradient;
+    };
+    
+    &_light {
+        background-image: $light-gradient;
+    };
+    
+    &__circle {
+        position: fixed;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 4px $background-color solid;
+        margin-top: -4px;
+        margin-left: 339px;
+        box-shadow: 0 1px 10px -7px $circle-shadow-color;
+        cursor: pointer;
+
+        &:before {
+            border-radius: 50%;
+            content: " ";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 3px solid $circle-inner-border-color;
+        };
+    };
+
+    &__value {
+        position: absolute;
+        font-size: 18px;
+        color: $background-color;
+        letter-spacing: 0;
+        margin: 20px;
+        font-weight: bold;
+
+        &_left {
+            left: 0;
+        }
+        
+        &_right {
+            right: 0;
+        }
+        
+        &_image {
+            top: -7px;
+        }
+    };
+}
+
+
+
+
+
+
+
