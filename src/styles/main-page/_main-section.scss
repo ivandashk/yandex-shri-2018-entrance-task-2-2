@@ -1,0 +1,13 @@
+.main-section {
+    grid-area: main-section;
+
+    &__name {
+        font-size: 18px;
+        color: $text-color;
+        font-weight: bold;
+        margin-top: 29px;
+    }
+
+    &__content {
+    }
+}

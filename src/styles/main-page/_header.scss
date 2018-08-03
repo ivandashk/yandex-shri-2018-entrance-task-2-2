@@ -1,0 +1,15 @@
+.header {
+    grid-area: header;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    grid-template-areas: 
+        "logo nav";
+    align-items: center;
+    border-bottom: 1px #F0F0F0 solid;
+
+    &__logo {
+        grid-area: logo;
+        margin-right: 52px;
+    };
+}

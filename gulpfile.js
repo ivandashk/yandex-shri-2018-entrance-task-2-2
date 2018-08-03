@@ -10,7 +10,7 @@ const browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
 
 gulp.task('html', () => {
-    return gulp.src('./src/templates/**/*.pug')
+    return gulp.src('./src/templates/index.pug')
         .pipe(plumber())
         .pipe(pug({pretty: true}))
         .pipe(gulp.dest('./public/'))
@@ -18,10 +18,10 @@ gulp.task('html', () => {
 })
 
 gulp.task('css', () => {
-    return gulp.src('./src/styles/**/*.scss')
+    return gulp.src('./src/styles/index.scss')
         .pipe(plumber())
         .pipe(sourceMaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass({outputStyle: 'compressed', includePaths: './src/styles/'}))
         .pipe(autoprefixer())
         .pipe(sourceMaps.write('./'))
         .pipe(gulp.dest('./public/'))
@@ -32,10 +32,11 @@ gulp.task('build', gulp.parallel('html', 'css'))
 
 gulp.task('serve', () => {
     browserSync.init({
-        server: './public'
+        server: './public',
+        browser: 'firefox'
     });
     watch('./src/templates/**/*.pug', gulp.series('html'));
-    watch('./src/styles/**/*.scss', gulp.series('css'));
+    watch('./src/styles/**/*.scss', {readDelay: 100}, gulp.series('css'));
     watch('*.html').on('change', reload);
 })
 

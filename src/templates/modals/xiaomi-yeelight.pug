@@ -1,0 +1,19 @@
+include ../mixins/horizontal-list.pug
+
+#xiaomi-yeelight.modal-form__layout
+    .modal-form
+        .modal-form__content.content
+            h1.content__header Xiaomi Yeelight LED Smart Bulb
+            .content__status Включится в 17:00
+            .content__indicator.content__indicator_light-off
+            .content__control
+                +horizontal-list("Вручную", "Дневной свет", "Вечерний свет", "Рассвет")
+                .slider.slider_light
+                    .slider__circle
+                    .slider__value.slider__value_left.slider__value_image
+                        img(src='./images/icon_sun_min.png')
+                    .slider__value.slider__value_right.slider__value_image
+                        img(src='./images/icon_sun_max.png')
+                
+        .modal-form__button.modal-form__button_apply Применить
+        .modal-form__button Закрыть

@@ -53,7 +53,8 @@
         }
         
         &_image {
-            top: -7px;
+            margin: calc((60px - 36px) / 2);
+            margin-right: 15px;
         }
     };
 }

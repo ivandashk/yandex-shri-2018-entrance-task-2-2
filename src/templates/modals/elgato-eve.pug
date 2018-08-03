@@ -1,0 +1,17 @@
+include ../mixins/horizontal-list.pug
+
+#elgato-eve.modal-form__layout
+    .modal-form
+        .modal-form__content.content
+            h1.content__header Elgato Eve Degree Connected
+            .content__status Включено
+            .content__indicator.content__indicator_temprature-on +23
+            .content__control
+                +horizontal-list("Вручную", "Холодно", "Тепло", "Жарко")
+                .slider.slider_temprature
+                    .slider__circle
+                    .slider__value.slider__value_left –10
+                    .slider__value.slider__value_right +30
+                
+        .modal-form__button.modal-form__button_apply Применить
+        .modal-form__button Закрыть

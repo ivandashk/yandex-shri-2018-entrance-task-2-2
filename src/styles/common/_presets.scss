@@ -2,8 +2,10 @@
     padding: 0;
     margin: 0;
     cursor: pointer;
-    
+
     &__item {
+        $selected-preset-color: $color-accent;
+
         font-size: 14px;
         box-sizing: border-box;
         display: inline;
@@ -18,8 +20,12 @@
             background-color: $color-accent-active;
         };
 
+        &:first-of-type {
+            background-color: $selected-preset-color;
+        };
+
         &_active {
-            background-color: $color-accent;
+            background-color: $selected-preset-color;
         };
     }
 }

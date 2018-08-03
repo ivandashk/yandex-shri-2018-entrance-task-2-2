@@ -1,0 +1,18 @@
+@import './general/normalize';
+@import './general/body';
+@import './general/variables';
+
+@import './common/presets';
+
+@import './main-page/main-page';
+@import './main-page/header';
+@import './main-page/nav';
+@import './main-page/main-section';
+@import './main-page/featured-scripts';
+@import './main-page/featured-devices';
+@import './main-page/footer';
+
+@import './modals/content';
+@import './modals/modal-form';
+@import './modals/slider';
+@import './modals/thermostat';

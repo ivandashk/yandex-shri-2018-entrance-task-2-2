@@ -1,0 +1,16 @@
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "nav copyright";
+    align-items: center;
+
+    &__copyright{
+        justify-self: right;
+        margin-right: 15px;
+        font-size: 12px;
+        color: #858585;
+        letter-spacing: 0.01px;
+    }
+}
