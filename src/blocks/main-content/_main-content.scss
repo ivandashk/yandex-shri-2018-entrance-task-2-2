@@ -1,0 +1,28 @@
+.main-content {
+    &__hello {
+        font-size: 27px;
+        color: #333333;
+        font-weight: bold;
+        align-self: flex-end;
+    }
+
+    &__status {
+        grid-row: 2; 
+        font-size: 14px;
+        color: #333333;
+        align-self: flex-end;
+    }
+
+    &__weather { 
+        grid-row: 4;
+    }
+
+    &__upcoming-events {
+        grid-row: 1 / 4; 
+        grid-column: 2 / 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, 120px);
+        grid-row-gap: 15px;
+    }
+}

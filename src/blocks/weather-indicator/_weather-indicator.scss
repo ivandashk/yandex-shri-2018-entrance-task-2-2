@@ -1,0 +1,19 @@
+.weather-indicator {
+    float: left;
+    margin-right: 18px;
+
+    &__place {
+        font-size: 14px;
+        color: #858585;
+    }
+
+    &__value {
+        font-size: 36px;
+        color: #333333;
+        font-weight: bold;
+    }
+
+    &__icon {
+        padding-left: 5px;
+    }
+}

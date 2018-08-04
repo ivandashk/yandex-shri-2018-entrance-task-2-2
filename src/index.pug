@@ -6,8 +6,11 @@ html
         title Яндекс Дом
         link(rel="stylesheet" href="./index.css")
     body#body.body
+        //- Include mixins
         include ./blocks/nav/presets.pug
+        include ./blocks/button/button.pug
+        include ./blocks/weather-indicator/weather-indicator.pug
         
-        include ./main-page/main-page.pug
+        include ./blocks/main-page/main-page.pug
         include ./blocks/modals/modals.pug
     script(src="script.js" type="application/javascript")

@@ -2,11 +2,13 @@
     grid-area: featured-devices;
     display: grid;
     grid-template-columns: 220px 1fr;
-    grid-template-rows: 54px 1fr 1fr 64px;
+    grid-template-rows: 54px 120px 1fr;
     grid-template-areas: 
         "title filters"
         "devices devices";
     align-items: flex-end;
+    grid-row-gap: 25px;
+    padding-left: 40px;
 
     &__title {
         grid-area: title;
@@ -22,5 +24,12 @@
     &__devices {
         grid-area: devices;
         grid-column: span 2;
+        display: grid;
+        grid-template-rows: 120px;
+        grid-template-columns: repeat(auto-fill, 200px);
+        grid-gap: 15px;
+        grid-auto-flow: column;
+        align-self: baseline;
+        overflow-x: hidden;
     }
 }

@@ -8,7 +8,7 @@
   </head>
   <body class="body" id="body">
     <div class="main-page" id="main-page">
-      <div class="header main-page__section">
+      <div class="header">
         <div class="header__logo"><img src="./images/Logo@1x.png"></div>
         <ul class="nav">
           <li class="nav__item_header">Сводка</li>
@@ -16,19 +16,66 @@
           <li class="nav__item_header">Сценарии</li>
         </ul>
       </div>
-      <div class="main-section main-page__section">
+      <div class="main-section">
         <div class="main-section__title">Главное</div>
         <div class="main-section__content">
-          <button class="open-modal" device="elgato-eve">Temprature</button>
-          <button class="open-modal" device="xiaomi-yeelight">Light</button>
-          <button class="open-modal" device="xiaomi-floor">Floor</button>
+          <div class="main-content__hello">Привет, Геннадий!</div>
+          <div class="main-content__status">Двери и окна закрыты, сигнализация включена.</div>
+          <div class="main-content__weather">
+                <div class="weather-indicator">
+                  <div class="weather-indicator__place">Дома</div>
+                  <div class="weather-indicator__value">+23<img class="weather-indicator__icon"></div>
+                </div>
+                <div class="weather-indicator">
+                  <div class="weather-indicator__place">За окном</div>
+                  <div class="weather-indicator__value">+19<img class="weather-indicator__icon" src="./images/cloud-drizzle.png"></div>
+                </div>
+          </div>
+          <div class="main-content__upcoming-events">
+                <div class="button open-modal" type="button" device="Philips Cooler">
+                  <div class="button__icon"><img src="./images/icon_temperature@1x.png"></div>
+                  <div class="button__name">Philips Cooler</div>
+                  <div class="button__status">Начнет охлаждать в 16:30</div>
+                </div>
+                <div class="button open-modal" type="button" device="Xiaomi Yeelight LED Smart Bulb">
+                  <div class="button__icon"><img src="./images/icon_sun@1x.png"></div>
+                  <div class="button__name">Xiaomi Yeelight LED Smart Bulb</div>
+                  <div class="button__status">Включится в 17:00</div>
+                </div>
+          </div>
         </div>
       </div>
-      <div class="featured-scripts">
-        <div class="featured-scripts__title">Избранные сценарии</div>
-        <div class="featured-scripts__content"> </div>
+      <div class="featured-scenarios">
+        <div class="featured-scenarios__title">Избранные сценарии</div>
+        <div class="featured-scenarios__scenarios">
+              <div class="button open-modal" type="button" device="Выключить весь свет в доме и во дворе">
+                <div class="button__icon"><img src="./images/icon_sun_2@1x.png"></div>
+                <div class="button__name">Выключить весь свет в доме и во дворе</div>
+                <div class="button__status"></div>
+              </div>
+              <div class="button open-modal" type="button" device="Я ухожу">
+                <div class="button__icon"><img src="./images/icon_scheduled@1x.png"></div>
+                <div class="button__name">Я ухожу</div>
+                <div class="button__status"></div>
+              </div>
+              <div class="button open-modal" type="button" device="Включить свет в коридоре">
+                <div class="button__icon"><img src="./images/icon_sun_2@1x.png"></div>
+                <div class="button__name">Включить свет в коридоре</div>
+                <div class="button__status"></div>
+              </div>
+              <div class="button open-modal" type="button" device="Набрать горячую ванну">
+                <div class="button__icon"><img src="./images/icon_temperature_2@1x.png"></div>
+                <div class="button__name">Набрать горячую ванну</div>
+                <div class="button__status">Начнётся в 17:00</div>
+              </div>
+              <div class="button open-modal" type="button" device="Сделать пол теплым во всей квартире">
+                <div class="button__icon"><img src="./images/icon_temperature_2@1x.png"></div>
+                <div class="button__name">Сделать пол теплым во всей квартире</div>
+                <div class="button__status"></div>
+              </div>
+        </div>
       </div>
-      <div class="featured-devices main-page__section">
+      <div class="featured-devices">
         <div class="featured-devices__title">Избранные устройства</div>
         <div class="featured-devices__filters">
               <ul class="nav">
@@ -39,9 +86,45 @@
                 <li class="nav__item_preset">Камеры</li>
               </ul>
         </div>
-        <div class="featured-devices__devices"></div>
+        <div class="featured-devices__devices">
+              <div class="button open-modal" type="button" device="Xiaomi Yeelight LED Smart Bulb">
+                <div class="button__icon"><img src="./images/icon_sun_2@1x.png"></div>
+                <div class="button__name">Xiaomi Yeelight LED Smart Bulb</div>
+                <div class="button__status">Включено</div>
+              </div>
+              <div class="button open-modal" type="button" device="Xiaomi Warm Floor">
+                <div class="button__icon"><img src="./images/icon_sun@1x.png"></div>
+                <div class="button__name">Xiaomi Warm Floor</div>
+                <div class="button__status">Включено</div>
+              </div>
+              <div class="button open-modal" type="button" device="Elgato Eve Degree Connected">
+                <div class="button__icon"><img src="./images/icon_temperature@1x.png"></div>
+                <div class="button__name">Elgato Eve Degree Connected</div>
+                <div class="button__status">Выключено до 17:00</div>
+              </div>
+              <div class="button open-modal" type="button" device="LIFX Mini Day &amp; Dusk A60 E27">
+                <div class="button__icon"><img src="./images/icon_sun@1x.png"></div>
+                <div class="button__name">LIFX Mini Day &amp; Dusk A60 E27</div>
+                <div class="button__status">Включится в 17:00</div>
+              </div>
+              <div class="button open-modal" type="button" device="Xiaomi Mi Air Purifier 2S">
+                <div class="button__icon"><img src="./images/icon_sun_2@1x.png"></div>
+                <div class="button__name">Xiaomi Mi Air Purifier 2S</div>
+                <div class="button__status">Включено</div>
+              </div>
+              <div class="button open-modal" type="button" device="Philips Zhirui">
+                <div class="button__icon"><img src="./images/icon_sun@1x.png"></div>
+                <div class="button__name">Philips Zhirui</div>
+                <div class="button__status">Выключено</div>
+              </div>
+              <div class="button open-modal" type="button" device="Xiaomi Mi Air Purifier 2S">
+                <div class="button__icon"><img src="./images/icon_sun_2@1x.png"></div>
+                <div class="button__name">Xiaomi Mi Air Purifier 2S</div>
+                <div class="button__status">Включено</div>
+              </div>
+        </div>
       </div>
-      <div class="footer main-page__section">
+      <div class="footer">
         <ul class="nav">
           <li class="nav__item_footer">Помощь</li>
           <li class="nav__item_footer">Обратная связь</li>

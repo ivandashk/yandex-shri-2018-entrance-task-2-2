@@ -5,6 +5,7 @@
     grid-template-areas: 
         "nav copyright";
     align-items: center;
+    padding-left: 40px;
 
     &__copyright{
         justify-self: right;

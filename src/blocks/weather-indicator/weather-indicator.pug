@@ -1,0 +1,5 @@
+mixin weather-indicator(place, value, iconPath)
+    .weather-indicator
+        .weather-indicator__place #{place}
+        .weather-indicator__value #{value}
+            img.weather-indicator__icon(src=iconPath)

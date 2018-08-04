@@ -1,0 +1,18 @@
+.featured-scenarios {
+    grid-area: featured-scenarios;
+
+    &__title {
+        font-size: 18px;
+        color: $text-color;
+        font-weight: bold;
+        margin-top: 29px;
+    }
+
+    &__scenarios {
+        margin-top: 20px;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(auto-fill, 200px);
+        grid-template-rows: repeat(3, 100px);
+    }
+}

@@ -1,13 +1,26 @@
 .main-section {
     grid-area: main-section;
+    padding-left: 40px;
+    display: grid;
+    grid-template-columns: 630px;
+    grid-template-rows: auto 1fr;
+    margin-right: 26px;
 
     &__title {
         font-size: 18px;
         color: $text-color;
         font-weight: bold;
         margin-top: 29px;
+        margin-bottom: 20px;
     }
 
     &__content {
+        background: url(./images/bg@1x.png) no-repeat left top;
+        border-radius: 20px;
+        padding: 20px 20px 0 25px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 385px 200px;
+        grid-template-rows: 36px 22px 25px 1fr;
     }
 }

@@ -1,0 +1,6 @@
+mixin button(name, status, iconPath)
+    .button.open-modal(type='button' device=name)
+        .button__icon
+            img(src=iconPath)
+        .button__name #{name}
+        .button__status #{status}
