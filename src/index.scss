@@ -1,0 +1,16 @@
+@import './general-styles/normalize';
+@import './general-styles/body';
+@import './general-styles/variables';
+
+@import './main-page/main-page';
+
+@import './blocks/header/header';
+@import './blocks/main-section/main-section';
+@import './blocks/featured-scripts/featured-scripts';
+@import './blocks/featured-devices/featured-devices';
+@import './blocks/footer/footer';
+@import './blocks/nav/nav';
+@import './blocks/modals/content';
+@import './blocks/modals/modal-form';
+@import './blocks/modals/slider';
+@import './blocks/modals/thermostat';

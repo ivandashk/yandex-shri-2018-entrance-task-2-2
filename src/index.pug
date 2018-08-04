@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        meta(http-equiv='content-type' content='text/html' charset='UTF-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Яндекс Дом
+        link(rel="stylesheet" href="./index.css")
+    body#body.body
+        include ./blocks/nav/presets.pug
+        
+        include ./main-page/main-page.pug
+        include ./blocks/modals/modals.pug
+    script(src="script.js" type="application/javascript")

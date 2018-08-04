@@ -17,16 +17,29 @@
         </ul>
       </div>
       <div class="main-section main-page__section">
-        <div class="main-section__name">Главное</div>
-        <div class="main-section__content"></div>
+        <div class="main-section__title">Главное</div>
+        <div class="main-section__content">
+          <button class="open-modal" device="elgato-eve">Temprature</button>
+          <button class="open-modal" device="xiaomi-yeelight">Light</button>
+          <button class="open-modal" device="xiaomi-floor">Floor</button>
+        </div>
       </div>
       <div class="featured-scripts">
-        <div class="featured-scripts__name">Избранные сценарии</div>
+        <div class="featured-scripts__title">Избранные сценарии</div>
         <div class="featured-scripts__content"> </div>
       </div>
       <div class="featured-devices main-page__section">
-        <div class="featured-devices__name">Избранные устройства</div>
-        <div class="featured-devices__content"> </div>
+        <div class="featured-devices__title">Избранные устройства</div>
+        <div class="featured-devices__filters">
+              <ul class="nav">
+                <li class="nav__item_preset">Все</li>
+                <li class="nav__item_preset">Кухня</li>
+                <li class="nav__item_preset">Зал</li>
+                <li class="nav__item_preset">Лампочки</li>
+                <li class="nav__item_preset">Камеры</li>
+              </ul>
+        </div>
+        <div class="featured-devices__devices"></div>
       </div>
       <div class="footer main-page__section">
         <ul class="nav">
@@ -45,11 +58,11 @@
           <div class="content__status">Включено</div>
           <div class="content__indicator content__indicator_temprature-on">+23</div>
           <div class="content__control">
-                <ul class="presets">
-                  <li class="presets__item">Вручную</li>
-                  <li class="presets__item">Холодно</li>
-                  <li class="presets__item">Тепло</li>
-                  <li class="presets__item">Жарко</li>
+                <ul class="nav">
+                  <li class="nav__item_preset">Вручную</li>
+                  <li class="nav__item_preset">Холодно</li>
+                  <li class="nav__item_preset">Тепло</li>
+                  <li class="nav__item_preset">Жарко</li>
                 </ul>
             <div class="slider slider_temprature">
               <div class="slider__circle"></div>
@@ -69,11 +82,11 @@
           <div class="content__status">Включится в 17:00</div>
           <div class="content__indicator content__indicator_light-off"></div>
           <div class="content__control">
-                <ul class="presets">
-                  <li class="presets__item">Вручную</li>
-                  <li class="presets__item">Дневной свет</li>
-                  <li class="presets__item">Вечерний свет</li>
-                  <li class="presets__item">Рассвет</li>
+                <ul class="nav">
+                  <li class="nav__item_preset">Вручную</li>
+                  <li class="nav__item_preset">Дневной свет</li>
+                  <li class="nav__item_preset">Вечерний свет</li>
+                  <li class="nav__item_preset">Рассвет</li>
                 </ul>
             <div class="slider slider_light">
               <div class="slider__circle"></div>

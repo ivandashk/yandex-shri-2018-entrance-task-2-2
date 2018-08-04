@@ -1,0 +1,26 @@
+.featured-devices {
+    grid-area: featured-devices;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 54px 1fr 1fr 64px;
+    grid-template-areas: 
+        "title filters"
+        "devices devices";
+    align-items: flex-end;
+
+    &__title {
+        grid-area: title;
+        font-size: 18px;
+        color: $text-color;
+        font-weight: bold;
+    }
+
+    &__filters {
+        grid-area: filters;
+    }
+
+    &__devices {
+        grid-area: devices;
+        grid-column: span 2;
+    }
+}

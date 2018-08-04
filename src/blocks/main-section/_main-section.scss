@@ -1,7 +1,7 @@
-.featured-scripts {
-    grid-area: featured-scripts;
+.main-section {
+    grid-area: main-section;
 
-    &__name {
+    &__title {
         font-size: 18px;
         color: $text-color;
         font-weight: bold;

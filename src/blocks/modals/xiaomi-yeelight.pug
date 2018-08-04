@@ -1,5 +1,3 @@
-include ../mixins/horizontal-list.pug
-
 #xiaomi-yeelight.modal-form__layout
     .modal-form
         .modal-form__content.content
@@ -7,7 +5,7 @@ include ../mixins/horizontal-list.pug
             .content__status Включится в 17:00
             .content__indicator.content__indicator_light-off
             .content__control
-                +horizontal-list("Вручную", "Дневной свет", "Вечерний свет", "Рассвет")
+                +presets("Вручную", "Дневной свет", "Вечерний свет", "Рассвет")
                 .slider.slider_light
                     .slider__circle
                     .slider__value.slider__value_left.slider__value_image

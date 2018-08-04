@@ -1,0 +1,54 @@
+.nav {
+    grid-area: nav;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+
+    &__item {
+        &_header {
+            display: inline;
+            margin-right: 27px;
+            font-size: 16px;
+            color: $text-color;
+            line-height: 20px;
+            opacity: .6;
+            font-weight: bold;
+            
+            &:hover {
+                opacity: 1;
+            };
+    
+            &:first-of-type {
+                opacity: 1;
+            };
+        };
+
+        &_footer {
+            display: inline;
+            margin-right: 15px;
+            font-size: 12px;
+            color: #858585;
+            letter-spacing: 0.01px;
+        };
+
+        &_preset {
+            font-size: 13px;
+            box-sizing: border-box;
+            display: inline;
+            border-radius: 20px;
+            padding: 7px 15px;
+            text-align: center;
+            font-weight: bold;
+            background-color: $li-inactive;
+            margin-right: 6px;
+    
+            &:hover {
+                background-color: $color-accent-active;
+            };
+    
+            &:first-of-type {
+                background-color: $color-accent;
+            };
+        }
+    };
+}
