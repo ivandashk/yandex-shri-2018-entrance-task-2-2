@@ -9,21 +9,38 @@
         "status indicator"
         "control control";
 
+    @media screen and (max-width: $screen-lg) {
+        display: block;
+    }
+
     &__header {
         grid-area: header;
         font-size: $font-size-large;
         font-weight: bold;
         margin: 0;
+
+        @media screen and (max-width: $screen-lg) {
+            font-size: $font-size-medium;
+        }
     };
 
     &__status {
         grid-area: status;
         font-size: $font-size-small;
+
+        @media screen and (max-width: $screen-lg) {
+            font-size: $font-size-tiny;
+            margin-top: 5px;
+        }
     };
 
     &__control {
         grid-area: control;
         margin-top: 20px;
+
+        @media screen and (max-width: $screen-lg) {
+            margin-top: 15px;
+        }
     };
 
     &__indicator { 
@@ -38,6 +55,10 @@
         letter-spacing: 0;
         padding-right: 43px;
         text-align: right;
+
+        @media screen and (max-width: $screen-lg) {
+            display: none;
+        }
 
         &_temprature-on {
             background-image: url(./images/icon_temperature_2@2x.png);

@@ -41,6 +41,10 @@
             font-weight: bold;
             background-color: $color-preset-inactive;
             margin-right: 6px;
+
+            @media screen and (max-width: $screen-lg) {
+                font-weight: normal;
+            }
     
             &:hover {
                 background-color: $color-accent-active;
@@ -49,10 +53,6 @@
             &:first-of-type {
                 background-color: $color-accent;
             };
-
-            @media screen and (max-width: $screen-lg) {
-                display: none;
-            }
         }
     };
 }

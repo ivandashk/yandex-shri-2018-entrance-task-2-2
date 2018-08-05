@@ -73,6 +73,11 @@
             grid-auto-flow: column;
             align-self: flex-start;
             overflow-x: hidden;
+
+            // Blink-driven browsers only
+            // &::-webkit-scrollbar{
+            //     display: none;
+            // }
         }
     }
 }

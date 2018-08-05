@@ -24,8 +24,10 @@ $font-size-large: 27px;
 $font-size-huge: 36px;
 $font-size-gigantic: 66px;
 
-$gradient-light: linear-gradient(95deg, #FFE682 2%, #FF9E00 98%);
-$gradient-temprature: linear-gradient(90deg, #068FFF 2%, #FFD800 51%, #F76B1C 100%);
+$gradient-light-horizontal: linear-gradient(95deg, #FFE682 2%, #FF9E00 98%);
+$gradient-light-vertical: linear-gradient(5deg, #FFE682 2%, #FF9E00 98%);
+$gradient-temprature-horizontal: linear-gradient(90deg, #068FFF 2%, #FFD800 51%, #F76B1C 100%);
+$gradient-temprature-vertical: linear-gradient(0, #068FFF 2%, #FFD800 51%, #F76B1C 100%);
 
 $screen-lg: 992px;
 

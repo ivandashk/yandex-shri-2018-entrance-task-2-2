@@ -4,12 +4,25 @@
     height: 60px;
     margin-top: 33px;
 
+    @media screen and (max-width: $screen-lg) {
+        width: 60px;
+        height: 400px;
+    }
+
     &_temprature {
-        background-image: $gradient-temprature;
+        background-image: $gradient-temprature-horizontal;
+
+        @media screen and (max-width: $screen-lg) {
+            background-image: $gradient-temprature-vertical
+        }
     };
     
     &_light {
-        background-image: $gradient-light;
+        background-image: $gradient-light-horizontal;
+
+        @media screen and (max-width: $screen-lg) {
+            background-image: $gradient-light-vertical;
+        }
     };
     
     &__circle {

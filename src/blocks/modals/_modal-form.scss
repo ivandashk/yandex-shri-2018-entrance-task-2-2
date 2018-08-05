@@ -7,6 +7,12 @@
     grid-template-rows: 1fr 60px;
     margin: 20px;
 
+    @media screen and (max-width: $screen-lg) {
+        display: flex;
+        flex-direction: column;
+        height: 95%;
+    }
+
     &__layout {
         align-items: center;
         background-color: $color-page-blur;
@@ -20,6 +26,10 @@
         width: 100%;
         z-index: 1;
 
+        @media screen and (max-width: $screen-lg) {
+            grid-template-columns: 1fr minmax(300px, 630px) 1fr;
+        }
+
         &_visible {
             display: grid;
         }
@@ -29,6 +39,11 @@
         background-color: $color-background;
         border-radius: 20px;
         padding: 26px 25px;
+        
+        @media screen and (max-width: $screen-lg) {
+            flex: 1;
+            padding: 21px 20px 26px;
+        }
     };
 
     &__button {
@@ -42,6 +57,10 @@
         text-align: center;
         letter-spacing: 0;
         cursor: pointer;
+
+        @media screen and (max-width: $screen-lg) {
+            margin-top: 15px;
+        }
 
         &_apply {
             background-color: $color-accent;
