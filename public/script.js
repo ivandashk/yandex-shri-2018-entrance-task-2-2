@@ -36,7 +36,7 @@ const getDeviceId = (deviceName) => {
             return 'xiaomi-yeelight';
         case 'Elgato Eve Degree Connected':
             return 'elgato-eve';
-        case 'D-Link Omna 180 Cam':
+        case 'Xiaomi Warm Floor':
             return 'xiaomi-floor';
         default:
             return;

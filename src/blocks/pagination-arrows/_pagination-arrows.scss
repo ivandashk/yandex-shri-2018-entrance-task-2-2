@@ -1,0 +1,12 @@
+.pagination-arrows {
+    cursor: pointer;
+
+    @media screen and (max-width: $screen-lg) {
+        display: none;
+    }
+
+    &__right {
+        transform: rotate(180deg);
+        margin-left: 15px;
+    }
+}

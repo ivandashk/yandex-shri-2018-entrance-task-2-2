@@ -9,7 +9,7 @@
 
     &__layout {
         align-items: center;
-        background-color: $layout-color;
+        background-color: $color-page-blur;
         display: none;
         grid-template-columns: 1fr 630px 1fr;
         height: 100%;
@@ -22,17 +22,17 @@
     };
 
     &__content {
-        background-color: $background-color;
+        background-color: $color-background;
         border-radius: 20px;
         padding: 26px 25px;
     };
 
     &__button {
-        background-color: $background-color;
+        background-color: $color-background;
         border-radius: 20px;
         box-sizing: border-box;
-        color: $text-color;
-        font-size: 18px;
+        color: $color-text;
+        font-size: $font-size-medium;
         font-weight: bold;
         padding: 20px;
         text-align: center;
@@ -41,13 +41,11 @@
 
         &_apply {
             background-color: $color-accent;
-            color: $apply-button-text-color;
+            color: $color-modal-apply-button-text;
             
             &:hover {
                 background-color: $color-accent-active;
-            };
-        };
-
-        
-    };
+            }
+        }
+    }
 }

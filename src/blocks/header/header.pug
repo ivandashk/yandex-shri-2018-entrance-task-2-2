@@ -1,6 +1,7 @@
 .header
     .header__logo
         img(src='./images/Logo@1x.png')
-    ul.nav
+    ul.header__nav.nav
         each item in ['Сводка', 'Устройства', 'Сценарии']
             li.nav__item_header= item
+    button.header__expander

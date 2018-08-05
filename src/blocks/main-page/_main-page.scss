@@ -1,5 +1,5 @@
 .main-page {
-    background-color: $background-color;
+    background-color: $color-background;
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -10,6 +10,17 @@
         "main-section featured-scenarios"
         "featured-devices featured-devices"
         "footer footer";
+
+    @media screen and (max-width: $screen-lg) {
+        display: block;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr 1fr 64px;
+        grid-template-areas: 
+            "header header"
+            "main-section featured-scenarios"
+            "featured-devices featured-devices"
+            "footer footer";
+    }
 
     &_blurred {
         filter: blur(2px);

@@ -1,16 +1,32 @@
 $color-accent: #FFD93E;
 $color-accent-active: #FFCD00;
-$circle-inner-border-color: rgba(33, 33, 33, 0.1);
-$circle-shadow-color: rgba(0, 0, 0, .5);
-$background-color: #FFF;
-$text-color: #333;
-$apply-button-text-color: #000;
-$layout-color: rgba(51, 51, 51, .5);
-$li-inactive: #F2F1F0;
+$color-background: #FFF;
+$color-button-background: #F7F7F7;
+$color-faded-text: #858585;
+$color-header-border: #F0F0F0;
+$color-modal-apply-button-text: #000;
+$color-preset-inactive: #F2F1F0;
+$color-text: #333;
+
+$color-button-shadow: rgba(197, 186, 186, .5);
+$color-page-blur: rgba(51, 51, 51, .5);
+$color-slider-circle-inner-border: rgba(33, 33, 33, 0.1);
+$color-slider-circle-shadow: rgba(0, 0, 0, .5);
 $color-thermostat-shadow: rgba(134,121,71, .45);
+
+$font-size-tiny: 12px;
+$font-size-miniature: 13px;
+$font-size-small: 14px;
+$font-size-compact: 16px;
+$font-size-medium: 18px;
+$font-size-big: 24px;
+$font-size-large: 27px;
+$font-size-huge: 36px;
+$font-size-gigantic: 66px;
+
+$gradient-light: linear-gradient(95deg, #FFE682 2%, #FF9E00 98%);
+$gradient-temprature: linear-gradient(90deg, #068FFF 2%, #FFD800 51%, #F76B1C 100%);
 
 $screen-lg: 992px;
 
-$temprature-gradient: linear-gradient(90deg, #068FFF 2%, #FFD800 51%, #F76B1C 100%);
-$light-gradient: linear-gradient(95deg, #FFE682 2%, #FF9E00 98%);
 

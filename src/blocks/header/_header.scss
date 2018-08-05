@@ -2,15 +2,44 @@
     grid-area: header;
     grid-column: span 2;
     display: grid;
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 160px 1fr 16px;
     grid-template-areas: 
-        "logo nav";
+        "logo nav expander";
     align-items: center;
-    border-bottom: 1px #F0F0F0 solid;
+    border-bottom: 1px $color-header-border solid;
     padding-left: 40px;
+    height: 64px;
+    z-index: 2;
+
+    @media screen and (max-width: $screen-lg) {
+        padding: 0 20px;
+        position: fixed;
+        background-color: $color-background;
+        border-bottom: none;
+        width: calc(100% - 40px);
+    }
 
     &__logo {
         grid-area: logo;
         margin-right: 52px;
     };
+
+    &__nav {
+        @media screen and (max-width: $screen-lg) {
+            display: none;
+        }
+    };
+
+    &__expander {
+        display: none;
+        background: url(./images/icon_list_m.png) no-repeat center center;
+        height: 16px;
+        width: 16px;
+        border: none;
+        cursor: pointer;
+        @media screen and (max-width: $screen-lg) {
+            grid-column: 3;
+            display: block;
+        }
+    }
 }

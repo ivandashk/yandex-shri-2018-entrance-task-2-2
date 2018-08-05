@@ -1,35 +1,64 @@
 .featured-devices {
     grid-area: featured-devices;
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 220px 1fr 47px 40px;
     grid-template-rows: 54px 120px 1fr;
     grid-template-areas: 
-        "title filters"
-        "devices devices";
+        "title filters arrows margin"
+        "devices devices devices devices";
     align-items: flex-end;
     grid-row-gap: 25px;
     padding-left: 40px;
 
+    @media screen and (max-width: $screen-lg) {
+        padding-left: 20px;
+    }
+
     &__title {
         grid-area: title;
-        font-size: 18px;
-        color: $text-color;
+        font-size: $font-size-medium;
+        color: $color-text;
         font-weight: bold;
     }
 
     &__filters {
         grid-area: filters;
+        display: grid;
+
+        &_nav {
+            @media screen and (max-width: $screen-lg) {
+                display: none;
+            }
+        }
+
+        &_combobox {
+            display: none;
+            justify-self: flex-end;
+
+            @media screen and (max-width: $screen-lg) {
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: $screen-lg) {
+            grid-column: span 2;
+        }
     }
 
     &__devices {
         grid-area: devices;
-        grid-column: span 2;
+        grid-column: span 4;
         display: grid;
-        grid-template-rows: 120px;
+        grid-template-rows: 130px;
         grid-template-columns: repeat(auto-fill, 200px);
         grid-gap: 15px;
         grid-auto-flow: column;
-        align-self: baseline;
+        align-self: flex-start;
         overflow-x: hidden;
+
+        // Blink-driven browsers only
+        // &::-webkit-scrollbar{
+        //     display: none;
+        // }
     }
 }

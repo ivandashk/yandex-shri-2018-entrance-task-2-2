@@ -1,10 +1,15 @@
 .featured-devices
     .featured-devices__title Избранные устройства
     .featured-devices__filters
-        +presets("Все", "Кухня", "Зал", "Лампочки", "Камеры")
+        .featured-devices__filters_nav
+            +presets("Все", "Кухня", "Зал", "Лампочки", "Камеры")
+        .featured-devices__filters_combobox
+            div Combobox
+    .featured-devices__pagination
+        +pagination-arrows()
     .featured-devices__devices
         +button("Xiaomi Yeelight LED Smart Bulb", "Включено", "./images/icon_sun_2@1x.png")
-        +button("Xiaomi Warm Floor", "Включено", "./images/icon_sun@1x.png")
+        +button("Xiaomi Warm Floor", "Включено", "./images/icon_temperature_2@1x.png")
         +button("Elgato Eve Degree Connected", "Выключено до 17:00", "./images/icon_temperature@1x.png")
         +button("LIFX Mini Day & Dusk A60 E27", "Включится в 17:00", "./images/icon_sun@1x.png")
         +button("Xiaomi Mi Air Purifier 2S", "Включено", "./images/icon_sun_2@1x.png")

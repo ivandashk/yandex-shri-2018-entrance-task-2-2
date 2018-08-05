@@ -1,28 +1,78 @@
 .main-content {
+    display: grid;
+    grid-template-columns: 385px 200px;
+    grid-template-rows: 36px 22px 25px 228px;
+    padding: 20px 20px 0 25px;
+    background: url(./images/bg@1x.png) no-repeat left top;
+    border-radius: 20px;
+
+    @media screen and (max-width: $screen-lg) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 25px 29px 67px 140px;
+        padding-right: 0;
+        margin-right: 20px;
+        background-position: center center;
+    }
+
     &__hello {
-        font-size: 27px;
-        color: #333333;
+        font-size: $font-size-large;
+        color: $color-text;
         font-weight: bold;
         align-self: flex-end;
+
+        @media screen and (max-width: $screen-lg) {
+            font-size: $font-size-medium;
+            align-self: flex-start;
+        }
     }
 
     &__status {
         grid-row: 2; 
-        font-size: 14px;
-        color: #333333;
+        font-size: $font-size-small;
+        color: $color-text;
         align-self: flex-end;
+
+        @media screen and (max-width: $screen-lg) {
+            font-size: $font-size-tiny;
+            align-self: flex-start;
+        }
     }
 
     &__weather { 
         grid-row: 4;
+        @media screen and (max-width: $screen-lg) {
+            grid-row: 3;
+        }
+    }
+
+    &__scroll-indicator {
+        grid-row: 5; 
+        position: relative;
+        bottom: 28px;
+        right: -475px;
+
+        @media screen and (max-width: $screen-lg) {
+            display: none;
+        }
     }
 
     &__upcoming-events {
-        grid-row: 1 / 4; 
+        grid-row: 1 / 5; 
         grid-column: 2 / 2;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(10, 120px);
-        grid-row-gap: 15px;
+        grid-gap: 15px;
+        overflow-y: hidden;
+
+        @media screen and (max-width: $screen-lg) {
+            grid-row: 4; 
+            grid-column: 1;
+            grid-template-rows: 125px;
+            grid-template-columns: repeat(auto-fill, 200px);
+            grid-auto-flow: column;
+            align-self: flex-start;
+            overflow-x: hidden;
+        }
     }
 }

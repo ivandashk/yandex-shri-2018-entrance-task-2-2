@@ -3,17 +3,28 @@
     margin-right: 18px;
 
     &__place {
-        font-size: 14px;
-        color: #858585;
+        font-size: $font-size-small;
+        color: $color-faded-text;
+
+        @media screen and (max-width: $screen-lg) {
+            font-size: $font-size-tiny;
+        }
     }
 
     &__value {
-        font-size: 36px;
-        color: #333333;
+        font-size: $font-size-huge;
+        color: $color-text;
         font-weight: bold;
+
+        @media screen and (max-width: $screen-lg) {
+            font-size: $font-size-big;
+        }
     }
 
     &__icon {
         padding-left: 5px;
+        @media screen and (max-width: $screen-lg) {
+            height: 18px;
+        }
     }
 }

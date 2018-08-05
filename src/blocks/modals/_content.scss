@@ -11,14 +11,14 @@
 
     &__header {
         grid-area: header;
-        font-size: 27px;
+        font-size: $font-size-large;
         font-weight: bold;
         margin: 0;
     };
 
     &__status {
         grid-area: status;
-        font-size: 14px;
+        font-size: $font-size-small;
     };
 
     &__control {
@@ -29,8 +29,8 @@
     &__indicator { 
         background: top right no-repeat;
         background-size: 41px;
-        color: $text-color;
-        font-size: 36px;
+        color: $color-text;
+        font-size: $font-size-huge;
         font-weight: bold;
         grid-area: indicator;
         grid-column: 2 / 2;

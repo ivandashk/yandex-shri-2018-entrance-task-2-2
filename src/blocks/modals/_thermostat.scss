@@ -11,6 +11,7 @@
         background: url(./images/Oval@1x.svg) no-repeat center center;
         height: 100%;
         width: 100%;
+        // Not working in Edge
         clip-path: polygon(100% 0, 100% 80%, 50% 50%, 37.5% 100%, 0 100%, 0 0);
     }
 
@@ -21,6 +22,7 @@
         height: 100%;
         width: 100%;
         z-index: 0;
+        // Not working in Edge
         clip-path: polygon(50% 50%, 63% 100%, 100% 80%);
     }
 
@@ -38,8 +40,8 @@
     }
 
     &__text {
-        font-size: 66px;
-        color: $text-color;
+        font-size: $font-size-gigantic;
+        color: $color-text;
         letter-spacing: 0;
         text-align: left;
         font-weight: bold;
@@ -49,7 +51,7 @@
         position: absolute;
         border-left: 7px solid transparent;
         border-right: 7px solid transparent;
-        border-bottom: 7px solid $text-color;
+        border-bottom: 7px solid $color-text;
         border-radius: 5px;
         transform: translateX(82px) translateY(21px) rotate(110deg);
     }

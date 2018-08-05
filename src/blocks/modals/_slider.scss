@@ -5,11 +5,11 @@
     margin-top: 33px;
 
     &_temprature {
-        background-image: $temprature-gradient;
+        background-image: $gradient-temprature;
     };
     
     &_light {
-        background-image: $light-gradient;
+        background-image: $gradient-light;
     };
     
     &__circle {
@@ -17,10 +17,10 @@
         height: 60px;
         width: 60px;
         border-radius: 50%;
-        border: 4px $background-color solid;
+        border: 4px $color-background solid;
         margin-top: -4px;
         margin-left: 339px;
-        box-shadow: 0 1px 10px -7px $circle-shadow-color;
+        box-shadow: 0 1px 10px -7px $color-slider-circle-shadow;
         cursor: pointer;
 
         &:before {
@@ -32,14 +32,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            border: 3px solid $circle-inner-border-color;
+            border: 3px solid $color-slider-circle-inner-border;
         };
     };
 
     &__value {
         position: absolute;
         font-size: 18px;
-        color: $background-color;
+        color: $color-background;
         letter-spacing: 0;
         margin: 20px;
         font-weight: bold;
