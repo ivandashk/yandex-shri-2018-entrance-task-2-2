@@ -1,17 +1,19 @@
 @import './general-styles/body';
 @import './general-styles/variables';
 
+@import './blocks/nav/nav';
+@import './blocks/combobox/combobox';
+@import './blocks/pagination-arrows/pagination-arrows';
+@import './blocks/weather-indicator/weather-indicator';
+@import './blocks/button/button';
+
 @import './blocks/main-page/main-page';
 @import './blocks/header/header';
 @import './blocks/main-section/main-section';
 @import './blocks/main-content/main-content';
 @import './blocks/featured-scenarios/featured-scenarios';
 @import './blocks/featured-devices/featured-devices';
-@import './blocks/weather-indicator/weather-indicator';
-@import './blocks/pagination-arrows/pagination-arrows';
-@import './blocks/button/button';
 @import './blocks/footer/footer';
-@import './blocks/nav/nav';
 @import './blocks/modals/content';
 @import './blocks/modals/modal-form';
 @import './blocks/modals/slider';

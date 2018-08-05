@@ -19,6 +19,10 @@
         top: 0;
         width: 100%;
         z-index: 1;
+
+        &_visible {
+            display: grid;
+        }
     };
 
     &__content {
@@ -41,7 +45,7 @@
 
         &_apply {
             background-color: $color-accent;
-            color: $color-modal-apply-button-text;
+            color: $color-text-strong;
             
             &:hover {
                 background-color: $color-accent-active;

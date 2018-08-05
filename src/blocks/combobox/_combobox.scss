@@ -1,0 +1,72 @@
+.combobox {
+    &__container {
+        position: relative;
+        font-family: Arial;
+        top: 7px;
+    }
+
+    &__default {
+        display: none;
+    }
+    
+    &__selected {
+        background-color: $color-accent;
+        color: $color-text-strong;
+        padding: 8px 16px;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        cursor: pointer;
+        user-select: none;
+        font-weight: bold;
+        font-size: $font-size-miniature;
+        margin-top: 5px;
+        padding-right: 30px;
+      
+        // An arrow
+        &:after {
+          position: absolute;
+          content: "";
+          top: 14px;
+          right: 12px;
+          width: 0;
+          height: 0;
+          border: 6px solid transparent;
+          border-color: $color-text-strong transparent transparent transparent;
+        }
+    }
+
+    // Script only. Don't use explicitly
+    &__items-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        margin-top: 3px;
+        border-radius: 20px;
+
+        &_hidden{
+            display: none;
+        }
+
+        div {
+            color: $color-text-strong;
+            padding: 8px 16px;
+            border: 1px solid transparent;
+            border-radius: 20px;
+            cursor: pointer;
+            user-select: none;
+            font-weight: bold;
+            font-size: $font-size-miniature;
+            margin-top: 5px;
+            padding-right: 30px;
+            background-color: $color-preset-inactive;
+            width: 45px;
+            box-shadow: 0 8px 8px 0 $color-button-shadow;
+          
+            &:hover {
+              background-color: $color-background;
+            }
+        } 
+    }
+}
