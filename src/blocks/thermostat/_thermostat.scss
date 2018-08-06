@@ -1,59 +1,72 @@
 .thermostat {
-    position: relative;
+    align-self: center;
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 221px;
-    align-self: center;
-    align-items: center;
     justify-items: center;
+    position: relative;
+
+    @media screen and (max-width: $screen-lg) {
+        height: 220px;
+        width: 100%;
+    }
+
+    &__wrapper {
+        @media screen and (max-width: $screen-lg) {
+            align-items: center;
+            display: flex;
+            flex: 1;
+        }
+    }
 
     &__active-circle {
-        position: absolute;
         background: url(./images/Oval@1x.svg) no-repeat center center;
-        height: 100%;
-        width: 100%;
         // Not working in Edge
         clip-path: polygon(100% 0, 100% 80%, 50% 50%, 37.5% 100%, 0 100%, 0 0);
+        position: absolute;
+        height: 100%;
+        width: 100%;
     }
 
     &__inactive-circle {
-        opacity: .7;
-        position: relative;
         background: url(./images/Oval_Inactive.svg) no-repeat center center;
-        height: 100%;
-        width: 100%;
-        z-index: 0;
         // Not working in Edge
         clip-path: polygon(50% 50%, 63% 100%, 100% 80%);
+        height: 100%;
+        opacity: .7;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
     }
 
     &__inner-circle {
-        position: absolute;
-        border-radius: 50%;
-        height: 174px;
-        width: 178px;
+        align-items: center;
         background: url(./images/background@1x.svg) no-repeat center center;
+        border-radius: 50%;
         box-shadow: 0 2px 4px 0 $color-thermostat-shadow;
         display: grid;
         grid-template-columns: 1fr;
-        align-items: center;
+        height: 174px;
         justify-items: center;
+        position: absolute;
+        width: 178px;
     }
 
     &__text {
-        font-size: $font-size-gigantic;
         color: $color-text;
+        font-size: $font-size-gigantic;
+        font-weight: bold;
         letter-spacing: 0;
         text-align: left;
-        font-weight: bold;
     }
 
     &__arrow {
-        position: absolute;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
         border-bottom: 7px solid $color-text;
+        border-left: 7px solid transparent;
         border-radius: 5px;
+        border-right: 7px solid transparent;
+        position: absolute;
         transform: translateX(82px) translateY(21px) rotate(110deg);
     }
 }

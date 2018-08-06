@@ -33,7 +33,7 @@
         &_visible {
             display: grid;
         }
-    };
+    }
 
     &__content {
         background-color: $color-background;
@@ -44,19 +44,19 @@
             flex: 1;
             padding: 21px 20px 26px;
         }
-    };
+    }
 
     &__button {
         background-color: $color-background;
         border-radius: 20px;
         box-sizing: border-box;
         color: $color-text;
+        cursor: pointer;
         font-size: $font-size-medium;
         font-weight: bold;
+        letter-spacing: 0;
         padding: 20px;
         text-align: center;
-        letter-spacing: 0;
-        cursor: pointer;
 
         @media screen and (max-width: $screen-lg) {
             margin-top: 15px;

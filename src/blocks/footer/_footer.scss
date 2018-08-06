@@ -1,22 +1,22 @@
 .footer {
-    grid-area: footer;
+    align-items: center;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-area: footer;
     grid-template-areas: 
         "nav copyright";
-    align-items: center;
+    grid-template-columns: 2fr 1fr;
     padding-left: 40px;
 
     @media screen and (max-width: $screen-lg) {
-        padding-left: 20px;
         padding-bottom: 20px;
+        padding-left: 20px;
     }
 
     &__copyright{
-        justify-self: right;
-        margin-right: 15px;
-        font-size: $font-size-tiny;
         color: $color-faded-text;
+        font-size: $font-size-tiny;
+        justify-self: right;
         letter-spacing: 0;
+        margin-right: 15px;
     }
 }

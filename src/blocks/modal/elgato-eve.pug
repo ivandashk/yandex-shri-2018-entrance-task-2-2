@@ -6,10 +6,7 @@
             .content__indicator.content__indicator_temprature-on +23
             .content__control
                 +presets("Вручную", "Холодно", "Тепло", "Жарко")
-                .slider.slider_temprature
-                    .slider__circle
-                    .slider__value.slider__value_left –10
-                    .slider__value.slider__value_right +30
+                include ../slider/slider-temprature.pug
                 
         .modal-form__button.modal-form__button_apply Применить
         .modal-form__button Закрыть

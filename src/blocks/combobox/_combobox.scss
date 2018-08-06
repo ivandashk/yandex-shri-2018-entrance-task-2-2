@@ -1,7 +1,6 @@
 .combobox {
     &__container {
         position: relative;
-        font-family: Arial;
         top: 7px;
     }
 
@@ -11,58 +10,58 @@
     
     &__selected {
         background-color: $color-accent;
-        color: $color-text-strong;
-        padding: 8px 16px;
         border: 1px solid transparent;
         border-radius: 20px;
+        color: $color-text-strong;
         cursor: pointer;
-        user-select: none;
         font-weight: bold;
         font-size: $font-size-miniature;
         margin-top: 5px;
+        padding: 8px 16px;
         padding-right: 30px;
+        user-select: none;
       
         // An arrow
         &:after {
-          position: absolute;
-          content: "";
-          top: 14px;
-          right: 12px;
-          width: 0;
-          height: 0;
-          border: 6px solid transparent;
-          border-color: $color-text-strong transparent transparent transparent;
+            border: 6px solid transparent;
+            border-color: $color-text-strong transparent transparent transparent;
+            content: "";
+            height: 0;
+            position: absolute;
+            right: 12px;
+            top: 14px;
+            width: 0;
         }
     }
 
-    // Script only. Don't use explicitly
+    // BEM violations. For script only. Don't use explicitly
     &__items-list {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 99;
-        margin-top: 3px;
         border-radius: 20px;
+        left: 0;
+        margin-top: 3px;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: 99;
 
         &_hidden{
             display: none;
         }
 
         div {
-            color: $color-text-strong;
-            padding: 8px 16px;
+            background-color: $color-preset-inactive;
             border: 1px solid transparent;
             border-radius: 20px;
+            box-shadow: 0 8px 8px 0 $color-button-shadow;
+            color: $color-text-strong;
             cursor: pointer;
-            user-select: none;
             font-weight: bold;
             font-size: $font-size-miniature;
             margin-top: 5px;
+            padding: 8px 16px;
             padding-right: 30px;
-            background-color: $color-preset-inactive;
+            user-select: none;
             width: 45px;
-            box-shadow: 0 8px 8px 0 $color-button-shadow;
           
             &:hover {
               background-color: $color-background;

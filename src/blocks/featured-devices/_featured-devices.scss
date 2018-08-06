@@ -1,13 +1,13 @@
 .featured-devices {
-    grid-area: featured-devices;
+    align-items: flex-end;
     display: grid;
-    grid-template-columns: 220px 1fr 47px 40px;
-    grid-template-rows: 54px 120px 1fr;
+    grid-area: featured-devices;
+    grid-row-gap: 25px;
     grid-template-areas: 
         "title filters arrows margin"
         "devices devices devices devices";
-    align-items: flex-end;
-    grid-row-gap: 25px;
+    grid-template-columns: 220px 1fr 47px 40px;
+    grid-template-rows: 54px 120px 1fr;
     padding-left: 40px;
 
     @media screen and (max-width: $screen-lg) {
@@ -15,15 +15,15 @@
     }
 
     &__title {
-        grid-area: title;
-        font-size: $font-size-medium;
         color: $color-text;
+        font-size: $font-size-medium;
         font-weight: bold;
+        grid-area: title;
     }
 
     &__filters {
-        grid-area: filters;
         display: grid;
+        grid-area: filters;
 
         &_nav {
             @media screen and (max-width: $screen-lg) {
@@ -46,14 +46,14 @@
     }
 
     &__devices {
+        align-self: flex-start;
+        display: grid;
         grid-area: devices;
         grid-column: span 4;
-        display: grid;
+        grid-gap: 15px;
         grid-template-rows: 130px;
         grid-template-columns: repeat(auto-fill, 200px);
-        grid-gap: 15px;
         grid-auto-flow: column;
-        align-self: flex-start;
         overflow-x: hidden;
 
         // Blink-driven browsers only

@@ -3,8 +3,8 @@
     margin-right: 18px;
 
     &__place {
-        font-size: $font-size-small;
         color: $color-faded-text;
+        font-size: $font-size-small;
 
         @media screen and (max-width: $screen-lg) {
             font-size: $font-size-tiny;
@@ -12,8 +12,8 @@
     }
 
     &__value {
-        font-size: $font-size-huge;
         color: $color-text;
+        font-size: $font-size-huge;
         font-weight: bold;
 
         @media screen and (max-width: $screen-lg) {
@@ -23,6 +23,7 @@
 
     &__icon {
         padding-left: 5px;
+        
         @media screen and (max-width: $screen-lg) {
             height: 18px;
         }

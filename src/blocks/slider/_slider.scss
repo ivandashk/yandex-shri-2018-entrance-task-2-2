@@ -1,12 +1,13 @@
 .slider {
-    position: relative;
     border-radius: 30px;
     height: 60px;
     margin-top: 33px;
+    position: relative;
 
     @media screen and (max-width: $screen-lg) {
+        height: 92.5%;
+        margin-left: calc(50% - 30px);
         width: 60px;
-        height: 400px;
     }
 
     &_temprature {
@@ -25,40 +26,60 @@
         }
     };
     
+    &__wrapper {
+        @media screen and (max-width: $screen-lg) {
+            flex: 1;
+            height: 100%;
+        }
+    };
+
     &__circle {
-        position: fixed;
-        height: 60px;
-        width: 60px;
-        border-radius: 50%;
         border: 4px $color-background solid;
-        margin-top: -4px;
-        margin-left: 339px;
+        border-radius: 50%;
         box-shadow: 0 1px 10px -7px $color-slider-circle-shadow;
         cursor: pointer;
+        height: 60px;
+        margin-top: -4px;
+        margin-left: 339px;
+        position: fixed;
+        width: 60px;
 
         &:before {
-            border-radius: 50%;
-            content: " ";
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
             border: 3px solid $color-slider-circle-inner-border;
+            border-radius: 50%;
+            bottom: 0;
+            content: " ";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
         };
+
+        @media screen and (max-width: $screen-lg) {
+            margin-top: 100px;
+            margin-left: -4px;
+        }
     };
 
     &__value {
-        position: absolute;
-        font-size: 18px;
         color: $color-background;
+        font-size: 18px;
+        font-weight: bold;
         letter-spacing: 0;
         margin: 20px;
-        font-weight: bold;
+        position: absolute;
+
+        @media screen and (max-width: $screen-lg) {
+            margin: 16px 14.9px 15px;
+        }
 
         &_left {
             left: 0;
+
+            @media screen and (max-width: $screen-lg) {
+                bottom: 0;
+            }
         }
         
         &_right {
@@ -68,8 +89,12 @@
         &_image {
             margin: calc((60px - 36px) / 2);
             margin-right: 15px;
+
+            @media screen and (max-width: $screen-lg) {
+                left: 0;
+            }
         }
-    };
+    }
 }
 
 

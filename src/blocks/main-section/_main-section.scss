@@ -1,22 +1,22 @@
 .main-section {
-    grid-area: main-section;
-    padding-left: 40px;
     display: grid;
+    grid-area: main-section;
     grid-template-columns: 630px;
     grid-template-rows: auto 1fr;
+    padding-left: 40px;
 
     @media screen and (max-width: $screen-lg) {
+        grid-template-columns: minmax(330px, 630px);
         padding-left: 20px;
         padding-top: 64px;
-        grid-template-columns: minmax(330px, 630px);
     }
 
     &__title {
-        font-size: $font-size-medium;
         color: $color-text;
+        font-size: $font-size-medium;
         font-weight: bold;
-        margin-top: 29px;
         margin-bottom: 20px;
+        margin-top: 29px;
 
         @media screen and (max-width: $screen-lg) {
             display: none;
