@@ -1,9 +1,13 @@
 const gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    sourceMaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
+    babel = require('gulp-babel'),
+    concat = require('gulp-concat'),
+    imagemin = require('gulp-imagemin')
     pug = require('gulp-pug'),
     plumber = require('gulp-plumber'),
+    sass = require('gulp-sass'),
+    sourceMaps = require('gulp-sourcemaps'),
+    uglify = require('gulp-uglify'),
     watch = require('gulp-watch');
 
 const browserSync = require('browser-sync').create(),
@@ -18,7 +22,7 @@ gulp.task('html', () => {
 })
 
 gulp.task('css', () => {
-    return gulp.src('./src/index.scss')
+    return gulp.src('./src/styles.scss')
         .pipe(plumber())
         .pipe(sourceMaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
@@ -28,16 +32,43 @@ gulp.task('css', () => {
         .pipe(browserSync.stream())
 })
 
-gulp.task('build', gulp.parallel('html', 'css'))
+gulp.task('js', () => {
+    return gulp.src('./src/blocks/**/*.js')
+        .pipe(plumber())
+        .pipe(sourceMaps.init())
+        .pipe(concat('scripts.min.js'))
+        .pipe(babel({ presets: ['env'] }))
+        .pipe(uglify())
+        .pipe(sourceMaps.write('./'))
+        .pipe(gulp.dest('./public/'))
+        .pipe(browserSync.stream())
+})
+
+gulp.task('images', () => {
+    return gulp.src('./src/images/*.+(png|svg)')
+        .pipe(imagemin([
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ]))
+        .pipe(gulp.dest('./public/images'))
+})
+
+gulp.task('build', gulp.parallel('html', 'css', 'js', 'images'))
 
 gulp.task('serve', () => {
     browserSync.init({
         server: './public',
         browser: 'firefox'
     });
-    watch('./src/**/*.pug', gulp.series('html'));
+    watch('./src/**/*.pug', gulp.series('html', reload));
     watch('./src/**/*.scss', {readDelay: 100}, gulp.series('css'));
-    watch('*.html').on('change', reload);
+    watch('./src/**/*.js', gulp.series('js', reload));
+    watch('./src/images/').on('add', gulp.series('images', reload));
 })
 
 gulp.task('default', gulp.series('build', 'serve'));
