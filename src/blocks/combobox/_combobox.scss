@@ -9,7 +9,7 @@
     }
     
     &__selected {
-        background-color: $color-accent;
+        background: $color-accent url(./images/arrow-down.svg) no-repeat center right 15px;
         border: 1px solid transparent;
         border-radius: 20px;
         color: $color-text-strong;
@@ -20,18 +20,6 @@
         padding: 8px 16px;
         padding-right: 30px;
         user-select: none;
-      
-        // An arrow
-        &:after {
-            border: 6px solid transparent;
-            border-color: $color-text-strong transparent transparent transparent;
-            content: "";
-            height: 0;
-            position: absolute;
-            right: 12px;
-            top: 14px;
-            width: 0;
-        }
     }
 
     // BEM violations. For script only. Don't use explicitly

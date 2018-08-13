@@ -62,11 +62,7 @@
     }
 
     &__arrow {
-        border-bottom: 7px solid $color-text;
-        border-left: 7px solid transparent;
-        border-radius: 5px;
-        border-right: 7px solid transparent;
         position: absolute;
-        transform: translateX(82px) translateY(21px) rotate(110deg);
+        transform: translateX(81px) translateY(25px) rotate(110deg);
     }
 }
