@@ -23,6 +23,26 @@
             }
         }
 
+        &_side {
+            position: relative;
+            color: $color-text;
+            font-size: $font-size-compact;
+            font-weight: bold;
+            line-height: 20px;
+            list-style-type: none;
+            margin: 30px 0 30px;
+            text-align: center;
+            opacity: .6;
+            
+            &:hover {
+                opacity: 1;
+            }
+    
+            &:first-of-type {
+                opacity: 1;
+            }
+        }
+
         &_footer {
             color: $color-faded-text;
             display: inline;
