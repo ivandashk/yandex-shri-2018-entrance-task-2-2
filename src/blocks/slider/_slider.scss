@@ -1,3 +1,9 @@
+// Wrong solution
+// Better: 
+// Element: input(type='range')
+// Track selectors: ::-webkit-slider-runnable-track, ::-moz-range-track, ::-ms-track 
+// Thumb selectors: ::-webkit-slider-thumb, ::-moz-range-thumb, ::-ms-thumb
+
 .slider {
     border-radius: 30px;
     height: 60px;
@@ -96,10 +102,4 @@
         }
     }
 }
-
-
-
-
-
-
 
