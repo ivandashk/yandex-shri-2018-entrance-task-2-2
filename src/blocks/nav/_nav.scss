@@ -5,77 +5,40 @@
     padding: 0;
 
     &__item {
-        &_header {
-            color: $color-text;
+        opacity: .6;
+            
+        &:hover {
+            opacity: 1;
+        }
+
+        &_horizontal {
             display: inline;
+        }
+
+        &_vertical {
+            position: relative;
+            list-style-type: none;
+            margin: 30px 0 30px;
+            text-align: center;
+        }
+
+        &_big {
+            color: $color-text;
             font-size: $font-size-compact;
             font-weight: bold;
             line-height: 20px;
             margin-right: 27px;
-            opacity: .6;
-            
-            &:hover {
-                opacity: 1;
-            }
-    
-            &:first-of-type {
-                opacity: 1;
-            }
         }
 
-        &_side {
-            position: relative;
-            color: $color-text;
-            font-size: $font-size-compact;
-            font-weight: bold;
-            line-height: 20px;
-            list-style-type: none;
-            margin: 30px 0 30px;
-            text-align: center;
-            opacity: .6;
-            
-            &:hover {
-                opacity: 1;
-            }
-    
-            &:first-of-type {
-                opacity: 1;
-            }
-        }
-
-        &_footer {
+        &_small {
             color: $color-faded-text;
-            display: inline;
             font-size: $font-size-tiny;
             letter-spacing: 0.01px;
             margin-right: 15px;
         }
 
-        &_preset {
-            background-color: $color-preset-inactive;
-            border-radius: 20px;
-            box-sizing: border-box;
-            display: inline-block;
-            font-size: $font-size-miniature;
-            font-weight: bold;
-            padding: 7px 15px;
-            position: relative;
-            text-align: center;
-            top: 4px;
-            margin-right: 6px;
-
-            @media screen and (max-width: $screen-lg) {
-                font-weight: normal;
-                overflow-x: hidden;
-            }
-    
-            &:hover {
-                background-color: $color-accent-active;
-            };
-    
-            &:first-of-type {
-                background-color: $color-accent;
-            }
+        &_active {
+            opacity: 1;
         }
     }
 }

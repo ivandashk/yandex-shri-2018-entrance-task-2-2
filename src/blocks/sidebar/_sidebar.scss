@@ -1,6 +1,9 @@
 .sidebar {
+    display: none;
+
     @media screen and (max-width: $screen-lg) {
         background-color: $color-background;
+        display: block;
         opacity: 0;
         position: fixed;
         top: 64px;

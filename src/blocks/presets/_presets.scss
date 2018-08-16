@@ -1,0 +1,33 @@
+.presets {
+    cursor: pointer;
+    grid-area: nav;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        background-color: $color-preset-inactive;
+        border-radius: 20px;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: $font-size-miniature;
+        font-weight: bold;
+        padding: 7px 15px;
+        position: relative;
+        text-align: center;
+        top: 4px;
+        margin-right: 6px;
+
+        @media screen and (max-width: $screen-lg) {
+            font-weight: normal;
+            overflow-x: hidden;
+        }
+
+        &:hover {
+            background-color: $color-accent-active;
+        };
+
+        &_active {
+            background-color: $color-accent;
+        }
+    }
+}
